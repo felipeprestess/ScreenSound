@@ -4,7 +4,7 @@ using ScreenSound.Modelos;
 
 try
 {
-    var artistaDal = new ArtistaDAL()
+    var artistaDal = new ArtistaDAL();
 
     var listaArtistas = artistaDal.Listar();
     foreach (var artista in listaArtistas)
