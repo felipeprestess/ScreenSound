@@ -43,6 +43,8 @@ void ExibirOpcoesDoMenu()
     if (opcoes.ContainsKey(opcaoEscolhidaNumerica))
     {
         Menu menuASerExibido = opcoes[opcaoEscolhidaNumerica];
+        var ctx = new ScreenSoundContext();
+        var dalArtista = new DAL<Artista>(ctx);
         menuASerExibido.Executar(dalArtista);
         if (opcaoEscolhidaNumerica > 0) ExibirOpcoesDoMenu();
     } 

@@ -6,7 +6,7 @@ namespace ScreenSound.Banco;
 
 public class ScreenSoundContext : DbContext
 {
-    private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=ScreenSoundDb;Integrated Security=True;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+    private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=ScreenSoundDbV0;Integrated Security=True;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
