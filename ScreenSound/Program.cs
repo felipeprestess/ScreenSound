@@ -4,7 +4,7 @@ using ScreenSound.Modelos;
 
 var context = new ScreenSoundContext();
 
-var artistaDAL = new ArtistaDAL(context);
+var repositoriArtista = new DAL<Artista>(context);
 
 Dictionary<int, Menu> opcoes = new();
 opcoes.Add(1, new MenuRegistrarArtista());
@@ -43,7 +43,7 @@ void ExibirOpcoesDoMenu()
     if (opcoes.ContainsKey(opcaoEscolhidaNumerica))
     {
         Menu menuASerExibido = opcoes[opcaoEscolhidaNumerica];
-        menuASerExibido.Executar(artistaDAL);
+        menuASerExibido.Executar(dalArtista);
         if (opcaoEscolhidaNumerica > 0) ExibirOpcoesDoMenu();
     } 
     else
